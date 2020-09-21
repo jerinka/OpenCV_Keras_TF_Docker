@@ -1,6 +1,6 @@
 Copied and edited from : https://github.com/idealo/nvidia-docker-keras
 
-Dockerhub link: https://hub.docker.com/repository/docker/jerinign/keras
+Dockerhub link: https://hub.docker.com/repository/docker/jerinign/opencv_keras
 
 # GPU version
 ```
