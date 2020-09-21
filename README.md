@@ -3,11 +3,9 @@ Copied and edited from : https://github.com/idealo/nvidia-docker-keras
 Dockerhub link: https://hub.docker.com/repository/docker/jerinign/keras
 
 # GPU version
-
 ```
 docker build -t jerinign/opencv_keras:gpu-1.12.0 . -f Dockerfile.gpu
 ```
-
 ```
 xhost +local:docker
 XSOCK=/tmp/.X11-unix
@@ -18,7 +16,6 @@ xhost -local:docker
 ```
 
 # or using shell script:
-
 ```
 bash runDocker_gpu.sh
  
@@ -29,13 +26,10 @@ python3 train.py
 exit
 ```
 
-
 # CPU version
-
 ```
 docker build -t jerinign/opencv_keras:cpu-1.12.0 . -f Dockerfile.cpu
 ```
-
 ```
 xhost +local:docker
 XSOCK=/tmp/.X11-unix
@@ -46,7 +40,6 @@ xhost -local:docker
 ```
 
 # or using shell script:
-
 ```
 bash runDocker_cpu.sh
 
