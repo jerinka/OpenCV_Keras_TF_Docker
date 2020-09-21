@@ -1,0 +1,35 @@
+FROM tensorflow/tensorflow:1.12.0-gpu-py3
+
+# Install system packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      bzip2 \
+      g++ \
+      git \
+      graphviz \
+      libgl1-mesa-glx \
+      libhdf5-dev \
+      openmpi-bin \
+      wget && \
+    rm -rf /var/lib/apt/lists/*
+
+# Setting up working directory 
+RUN mkdir /src
+WORKDIR /src
+
+COPY src/requirements.txt requirements.txt
+
+RUN pip install --upgrade pip
+
+RUN pip install -r requirements.txt
+
+RUN pip install opencv-python
+
+ENV PYTHONPATH='/src/:$PYTHONPATH'
+
+
+# Minimize image size 
+RUN (apt-get autoremove -y; \
+     apt-get autoclean -y)
+     
+
+CMD ["bash"]
