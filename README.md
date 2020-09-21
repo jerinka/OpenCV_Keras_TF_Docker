@@ -17,9 +17,11 @@ docker run -m 8GB -it --rm --device=/dev/video0 -e DISPLAY=$DISPLAY -v $XSOCK:$X
 xhost -local:docker
 ```
 
-# or just: bash runDocker_gpu.sh
+# or using shell script:
 
 ```
+bash runDocker_gpu.sh
+ 
 python3 show.py
 
 python3 train.py
@@ -43,9 +45,11 @@ docker run -m 8GB -it --rm --device=/dev/video0 -e DISPLAY=$DISPLAY -v $XSOCK:$X
 xhost -local:docker
 ```
 
-# or just: bash runDocker_cpu.sh
+# or using shell script:
 
 ```
+bash runDocker_cpu.sh
+
 python3 show.py
 
 python3 train.py
